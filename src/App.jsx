@@ -155,11 +155,11 @@ export default function App() {
         )}
       </nav>
 
-      {/* Hero Section */}
+     {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/10 to-teal-900/70 z-10"></div>
         <div className="absolute inset-0">
-          <div className="w-full h-full bg-cover bg-center" style={heroStyle}></div>
+          <img src={Mongrove2} alt="Mangrove Forest" className="w-full h-full object-cover object-center" />
         </div>
         
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto animate-fadeIn pt-20">
@@ -308,6 +308,12 @@ export default function App() {
 
           <div className="space-y-8">
             <div className="max-w-2xl mx-auto">
+
+            {/* Mangrove Image */}
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src={Mangrove1} alt="Thriving Mangrove Ecosystem" className="w-full h-auto object-cover" />
+                  </div>
+              
               {/* Thriving Mangrove Video */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
                 <video controls className="w-full aspect-video cursor-pointer" onClick={() => openModal(ThrivingMangroveVideo, 'video')}>
