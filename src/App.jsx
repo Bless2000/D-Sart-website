@@ -196,13 +196,37 @@ export default function App() {
       <section id="about" className="py-20 bg-gradient-to-b from-white to-emerald-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Heritage</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Are About</h2>
             <div className="w-24 h-1 bg-emerald-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A living legacy of environmental stewardship spanning over 160 years
+              A living legacy of environmental stewardship spanning over 200 years
             </p>
           </div>
 
+          <div className="bg-[#E8FFF6] rounded-2xl p-6 shadow-md border border-green-100 mt-6">
+            <h2 className="text-2xl font-semibold text-[#074F44] mb-4">
+              Our Heritage
+            </h2>
+
+            <p className="text-[#4A4A4A] leading-relaxed">
+              At D-Sart, our heritage is rooted in a deep commitment to environmental
+              stewardship and the urgent fight against climate change. Our mission focuses
+              on mangrove afforestation—planting, protecting, preserving, and restoring these
+              essential ecosystems that defend both people and nature. Mangroves are among
+              the world’s most effective natural climate shields, storing carbon at
+              exceptional levels while protecting coastal communities from erosion,
+              flooding, and the impacts of rising sea levels.
+            </p>
+
+            <p className="text-[#4A4A4A] leading-relaxed mt-4">
+              Beyond their environmental strength, thriving mangrove forests support rich
+              aquatic life, providing crucial breeding habitats for fish and sustaining the
+              livelihoods of families who depend on these waters. Their presence strengthens
+              local communities and enhances national resilience. By restoring mangroves, we
+              restore balance—protecting biodiversity, uplifting communities, and honoring our
+              responsibility to safeguard the land, the waters, and future generations.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <div className="bg-white rounded-2xl shadow-xl p-8">
@@ -351,9 +375,8 @@ export default function App() {
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <img src={MangroveFarmersImage} alt="Restoration Team" className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(MangroveFarmersImage, 'image')}/>
                 <div className="p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Restoration Team</h4>
-                  <p className="text-sm text-gray-600">Dedicated workers committed to mangrove conservation and ecosystem restoration</p>
-                </div>
+                                  <h4 className="font-bold text-gray-900 mb-2">Nursery Workers, 2012</h4>
+                                  <p className="text-sm text-gray-600">Dedicated workers nurturing mangrove seedlings in 2012, vital for ecosystem restoration efforts.</p>                </div>
               </div>
 
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
