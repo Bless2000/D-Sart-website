@@ -227,9 +227,9 @@ export default function App() {
               responsibility to safeguard the land, the waters, and future generations.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 mt-4">
             <div>
-              <div className="bg-white rounded-2xl shadow-xl p-8">
+              <div className="bg-white rounded-2xl shadow-xl p-8 mt-3">
                 <h3 className="text-3xl font-bold text-emerald-900 mb-6">Since 1860: A Legacy of Conservation</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   The inherited mangrove dates back to 1860, when the forefathers of the present custodians first settled along the coastal wetlands and began nurturing the mangrove ecosystem. Passed down through generations, this mangrove heritage has remained under the care of the same local family and community, who have preserved it as both a natural shield and a source of livelihood.
