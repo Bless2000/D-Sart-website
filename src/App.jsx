@@ -20,6 +20,7 @@ import AloryitoHunorImage from './assets/team/Aloryito Hunor..jpg';
 import NyaledzigborLumorImage from './assets/team/Nyaledzigbor Lumor:planer , reforestation worker..jpg';
 import Mangrove1 from './assets/Mangrove1.jpg';
 import Mongrove2 from './assets/Mongrove2.jpg';
+import Destroy2 from './assets/videos/Destroy2.mp4';
 import AkplorwotorDzitaAgbledomeImage from './assets/team/Akplorwotor Dzita Agbledome.jpg';
 
 
@@ -383,8 +384,8 @@ export default function App() {
             {/* Additional Destruction Videos */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-red-50 rounded-xl overflow-hidden shadow-lg border-2 border-red-200">
-                <video controls className="w-full aspect-video cursor-pointer" onClick={() => openModal(UrbanizationVideo, 'video')}>
-                  <source src={UrbanizationVideo} type="video/mp4" />
+                <video controls className="w-full aspect-video cursor-pointer" onClick={() => openModal(Destroy2, 'video')}>
+                  <source src={Destroy2} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="p-4 bg-white">
