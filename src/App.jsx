@@ -376,7 +376,7 @@ export default function App() {
                 <img src={MangroveFarmersImage} alt="Restoration Team" className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(MangroveFarmersImage, 'image')}/>
                 <div className="p-4">
                                   <h4 className="font-bold text-gray-900 mb-2">Nursery Workers, 2012</h4>
-                                  <p className="text-sm text-gray-600">Dedicated workers nurturing mangrove seedlings in 2012, vital for ecosystem restoration efforts.</p>                </div>
+                                  <p className="text-sm text-gray-600">Dedicated Tunu workers nurturing mangrove seedlings in 2012, vital for ecosystem restoration efforts.</p>                </div>
               </div>
 
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
