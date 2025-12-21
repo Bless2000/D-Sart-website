@@ -367,7 +367,7 @@ export default function App() {
                   Your browser does not support the video tag.
                 </video>
                 <div className="p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Planting Site at Tunu</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Nusery Site at Tunu</h4>
                   <p className="text-sm text-gray-600">Community members planting mangrove seedlings in designated restoration areas</p>
                 </div>
               </div>
