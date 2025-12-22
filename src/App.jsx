@@ -471,7 +471,7 @@ export default function App() {
                 </video>
                 <div className="p-4 bg-white">
                   <h4 className="font-bold text-red-900 mb-2">The Challenge We Face</h4>
-                  <p className="text-sm text-gray-600">Video of fishes dead on the sea due to bad actions</p>
+                  <p className="text-sm text-gray-600">Video of fishes dead on the Volta river due to bad actions</p>
                 </div>
               </div>
             </div>
