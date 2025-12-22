@@ -205,7 +205,7 @@ export default function App() {
 
           <div className="bg-[#E8FFF6] rounded-2xl p-6 shadow-md border border-green-100 mt-6">
             <h2 className="text-2xl font-semibold text-[#074F44] mb-4">
-              Our Heritage
+              Our Mission
             </h2>
 
             <p className="text-[#4A4A4A] leading-relaxed">
@@ -230,9 +230,9 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16 mt-4">
             <div>
               <div className="bg-white rounded-2xl shadow-xl p-8 mt-3">
-                <h3 className="text-3xl font-bold text-emerald-900 mb-6">Since 1860: A Legacy of Conservation</h3>
+                <h3 className="text-3xl font-bold text-emerald-900 mb-6">Since 1760: A Legacy of Conservation</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  The inherited mangrove dates back to 1860, when the forefathers of the present custodians first settled along the coastal wetlands and began nurturing the mangrove ecosystem. Passed down through generations, this mangrove heritage has remained under the care of the same local family and community, who have preserved it as both a natural shield and a source of livelihood.
+                  The inherited mangrove dates back to 1760, when the forefathers of the present custodians first settled along the coastal wetlands and began nurturing the mangrove ecosystem. Passed down through generations, this mangrove heritage has remained under the care of the same local family and community, who have preserved it as both a natural shield and a source of livelihood.
                 </p>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Over the decades, the true owners have continued planting, protecting, and restoring the mangrove to sustain fish habitats, prevent erosion, and support biodiversity. Despite modern challenges, their commitment to conservation has never wavered.
