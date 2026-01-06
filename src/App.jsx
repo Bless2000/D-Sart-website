@@ -26,7 +26,6 @@ import AkplorwotorDzitaAgbledomeImage from './assets/team/Akplorwotor Dzita Agbl
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ src: '', type: '' });
 
@@ -38,12 +37,6 @@ export default function App() {
   const closeModal = () => {
     setModalOpen(false);
     setModalContent({ src: '', type: '' });
-  };
-
-  const scrollToSection = (sectionId) => {
-    setActiveSection(sectionId);
-    setMobileMenuOpen(false);
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const teamMembers = [
@@ -107,22 +100,20 @@ export default function App() {
             
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'mission', 'gallery', 'team', 'partner', 'contact'].map((section) => (
-                <button
+                <a
                   key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`text-sm font-medium transition-colors ${
-                    activeSection === section ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
-                  }`}
+                  href={`#${section}`}
+                  className="text-sm font-medium transition-colors text-gray-700 hover:text-emerald-600"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
+                </a>
               ))}
-              <button
-                onClick={() => scrollToSection('donate')}
+              <a
+                href="#donate"
                 className="bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl"
               >
                 Donate Now
-              </button>
+              </a>
             </div>
 
             <button
@@ -139,13 +130,13 @@ export default function App() {
           <div className="md:hidden bg-white border-t">
             <div className="px-4 py-4 space-y-3">
               {['home', 'about', 'mission', 'gallery', 'team', 'partner', 'contact', 'donate'].map((section) => (
-                <button
+                <a
                   key={section}
-                  onClick={() => scrollToSection(section)}
+                  href={`#${section}`}
                   className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-emerald-50 rounded-lg"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -160,21 +151,29 @@ export default function App() {
 
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/10 to-teal-900/70 z-10"></div>
 
-        <div className="absolute inset-0">
+                <div className="absolute inset-0">
 
-          <img src={Mongrove2} alt="Mangrove Forest" className="w-full h-full object-cover object-center" />
+                  <img
 
-        </div>
+                    src={Mongrove2}
+
+                    alt="A lush and thriving mangrove forest, with sunlight filtering through the dense canopy of leaves."
+
+                    className="w-full h-full object-cover object-center"
+
+                  />
+
+                </div>
 
         
 
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto animate-fadeIn pt-20">
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                    <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
 
-            Mangrove Restoration
+                      Mangrove Restoration
 
-          </h1>
+                    </h2>
 
           <p className="text-2xl md:text-3xl text-green-200 mb-4 font-light">
 
@@ -188,37 +187,37 @@ export default function App() {
 
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-            <button
+                      <a
 
-              onClick={() => scrollToSection('donate')}
+                        href="#donate"
 
-              className="bg-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-emerald-500 transition-all shadow-2xl hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
+                        className="bg-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-emerald-500 transition-all shadow-2xl hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
 
-            >
+                      >
 
-              <Heart className="h-5 w-5" />
+                        <Heart className="h-5 w-5" />
 
-              Support Our Cause
+                        Support Our Cause
 
-            </button>
+                      </a>
 
-            <button
+                      <a
 
-              onClick={() => scrollToSection('about')}
+                        href="#about"
 
-              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all border-2 border-white/30 flex items-center justify-center gap-2"
+                        className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all border-2 border-white/30 flex items-center justify-center gap-2"
 
-            >
+                      >
 
-              Learn More
+                        Learn More
 
-              <ChevronRight className="h-5 w-5" />
+                        <ChevronRight className="h-5 w-5" />
 
-            </button>
+                      </a>
 
-          </div>
+                    </div>
 
         </div>
 
@@ -228,15 +227,15 @@ export default function App() {
 
       {/* New Header */}
 
-      <div className="py-16 text-center">
+            <div className="py-16 text-center">
 
-        <h1 className="text-5xl md:text-6xl font-extrabold text-emerald-700 leading-tight">
+              <h2 className="text-5xl md:text-6xl font-extrabold text-emerald-700 leading-tight">
 
-          We Plant, Protect, Preserve and Conserve
+                We Plant, Protect, Preserve and Conserve
 
-        </h1>
+              </h2>
 
-      </div>
+            </div>
 
 
 
@@ -421,14 +420,14 @@ export default function App() {
               </div>
 
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-                <img src={MangroveFarmersImage} alt="Restoration Team" className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(MangroveFarmersImage, 'image')}/>
+                <img src={MangroveFarmersImage} alt="A group of dedicated Tunu workers, the driving force behind the mangrove restoration, nurturing the seedlings in 2012." className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(MangroveFarmersImage, 'image')}/>
                 <div className="p-4">
                                   <h4 className="font-bold text-gray-900 mb-2">Nursery Workers, 2012</h4>
                                   <p className="text-sm text-gray-600">Dedicated Tunu workers nurturing mangrove seedlings in 2012, vital for ecosystem restoration efforts.</p>                </div>
               </div>
 
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-                <img src={SkillsTrainingImage} alt="Training" className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(SkillsTrainingImage, 'image')}/>
+                <img src={SkillsTrainingImage} alt="Community members engaged in a skills training program, learning sustainable fish farming techniques to support their livelihoods." className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(SkillsTrainingImage, 'image')}/>
                 <div className="p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Skills Training Program</h4>
                   <p className="text-sm text-gray-600">Community members receiving training in sustainable fish farming techniques</p>
@@ -436,7 +435,7 @@ export default function App() {
               </div>
 
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-                <img src={TunuWorkersImage} alt="Tunu community workers in action" className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(TunuWorkersImage, 'image')}/>
+                <img src={TunuWorkersImage} alt="The Tunu community workers in action, showcasing their dedication to conserving the mangrove ecosystem." className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(TunuWorkersImage, 'image')}/>
                 <div className="p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Community Engagement</h4>
                   <p className="text-sm text-gray-600">Tunu community workers in action, dedicated to conservation</p>
@@ -444,7 +443,7 @@ export default function App() {
               </div>
 
               <div className="bg-red-50 rounded-xl overflow-hidden shadow-lg border-2 border-red-200">
-                <img src={FirewoodImage} alt="Mangroves used for firewood" className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(FirewoodImage, 'image')}/>
+                <img src={FirewoodImage} alt="A pile of harvested mangroves being used for firewood, highlighting one of the significant challenges the ecosystem faces." className="w-full h-48 object-cover cursor-pointer" onClick={() => openModal(FirewoodImage, 'image')}/>
                 <div className="p-4 bg-white">
                   <h4 className="font-bold text-red-900 mb-2">The Challenge We Face</h4>
                   <p className="text-sm text-gray-600">Mangroves being used for firewood in a bad way</p>
@@ -516,7 +515,7 @@ export default function App() {
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Bank:</strong> Ecobank Lapaz</p>
                     <p><strong>Account Name:</strong> D-SART Wildlife Aquatic Conservation</p>
-                    <p><strong>Account Number:</strong> 1441003928958</p>
+                    <p><strong>Account Number:</strong> 144100XXXXXXX</p>
                   </div>
                 </div>
 
@@ -575,7 +574,7 @@ export default function App() {
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden group">
                 <div className="aspect-square bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center overflow-hidden">
-                   <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform cursor-pointer" onClick={() => openModal(member.image, 'image')}/>
+                   <img src={member.image} alt={`${member.name}, ${member.role}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform cursor-pointer" onClick={() => openModal(member.image, 'image')}/>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
@@ -765,9 +764,9 @@ export default function App() {
             <ul className="space-y-2 text-sm">
               {['About', 'Mission', 'Gallery', 'Team', 'Donate'].map((link) => (
                 <li key={link}>
-                  <button onClick={() => scrollToSection(link.toLowerCase())} className="text-gray-400 hover:text-white transition-colors">
+                  <a href={`#${link.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors">
                     {link}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
